@@ -1,8 +1,9 @@
 "use client";
-import { useState } from "react";
+// import { useState } from "react";
+import Title from "../Title";
 
 const Events = ({ events, totalDays }) => {
-  const [selectedDay, setSelectedDay] = useState(
+  /* const [selectedDay, setSelectedDay] = useState(
     new Date() > new Date(events[0].start)
       ? new Date().toLocaleString("en-US", {
           timeZone: "America/Los_Angeles",
@@ -10,8 +11,13 @@ const Events = ({ events, totalDays }) => {
         })
       : "Monday",
   );
+  */
 
   return (
+    <div className="-mt-1 flex flex-col items-center justify-center gap-10 py-10 font-righteous text-white">
+      <Title text={"Schedule Coming Soon"} />
+    </div>
+    /*
     <div className="flex flex-col items-center justify-center">
       <div className="mx-auto grid w-10/12 grid-cols-6 items-center justify-between rounded border-2 border-black text-base">
         {totalDays.map((day) => (
@@ -50,6 +56,7 @@ const Events = ({ events, totalDays }) => {
           ))}
       </div>
     </div>
+    */
   );
 };
 
