@@ -25,7 +25,7 @@ export const COLORS = {
     border: "border-0",
   },
   purple: {
-    bg: "bg-cutie-purple",
+    bg: "bg-cutie-purple-100",
     text: "text-white",
     border: "border-0",
   },

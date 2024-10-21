@@ -3,7 +3,7 @@ import Image from "next/image";
 import Star from "@/public/assets/staryellow.svg";
 import White from "@/public/assets/whitestar.svg";
 
-const Title = ({ text }) => {
+const Title = ({ text, subtext }) => {
   return (
     <div className="relative w-fit py-10 font-righteous">
       <div className="text-5xl font-bold text-white md:text-8xl">
@@ -11,7 +11,7 @@ const Title = ({ text }) => {
         <span className="w-full">{text.slice(1)}</span>
       </div>
       <p className="mt-8 text-center text-xs font-medium text-cutie-blue-100 md:text-3xl">
-        Thank you so much!
+        {subtext}
       </p>
       <div>
         <Image

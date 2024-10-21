@@ -18,7 +18,7 @@ type config = {
 const data: config = {
   name: "CutieHack",
   short_name: "CutieHack",
-  email: "contact.acmucr@gmail.com",
+  email: "citrushack@gmail.com",
   description:
     "Cutie Hack is a 12-hour, beginner-oriented hackathon hosted by students at University of California, Riverside where hackers are challenged to create a cool project within the time frame to demo in order to win awesome prizes and participate in workshops, fun games, and networking.",
   length: 24,
@@ -30,7 +30,7 @@ const data: config = {
   instagram: "https://www.instagram.com",
   linkedin: "https://www.linkedin.com",
   discord: "https://www.discord.com",
-  heart: "🤎",
+  heart: "🧡",
 };
 
 export default data;

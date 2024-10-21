@@ -5,6 +5,7 @@ import Link from "next/link";
 import { items } from "@/data/live/Navigation";
 import { useState } from "react";
 import { Menu } from "lucide-react";
+import { Link as Scroll } from "react-scroll";
 
 const Navigation = () => {
   const { data: session } = useSession();
@@ -15,9 +16,17 @@ const Navigation = () => {
       {/* Desktop Nav */}
       <div className="hidden w-full justify-evenly md:flex">
         {items.map((item, index) => (
-          <Link key={index} href={item.link} className="p-1 font-bold">
+          <Scroll
+            key={index}
+            to={item.id}
+            href={item.link}
+            spy={true}
+            smooth={true}
+            offset={-100}
+            className="cursor-pointer p-1 font-bold"
+          >
             {item.name}
-          </Link>
+          </Scroll>
         ))}
         {session ? (
           Object.keys(session.user.roles).includes("participants") && (
@@ -31,7 +40,7 @@ const Navigation = () => {
         ) : (
           <div
             onClick={() => signIn("google")}
-            className="border-custom-white border p-1 px-2 shadow-custom-white"
+            className="border-custom-white cursor-pointer border p-1 px-2 shadow-custom-white"
           >
             LOGIN
           </div>
@@ -48,14 +57,18 @@ const Navigation = () => {
       {isOpen && (
         <div className="absolute left-0 top-16 flex w-full flex-col items-center bg-gradient-to-t from-cutie-blue-200 to-cutie-blue-300 pb-5 pt-2 shadow-2xl">
           {items.map((item, index) => (
-            <Link
+            <Scroll
               key={index}
+              to={item.id}
               href={item.link}
-              className="w-full py-2 text-center"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              className="w-full cursor-pointer py-2 text-center"
               onClick={() => setIsOpen(false)}
             >
               {item.name}
-            </Link>
+            </Scroll>
           ))}
           {session ? (
             Object.keys(session.user.roles).includes("participants") && (
@@ -73,7 +86,7 @@ const Navigation = () => {
                 signIn("google");
                 setIsOpen(false);
               }}
-              className="border-custom-white mt-2 w-full border p-1 px-2 text-center shadow-custom-white"
+              className="border-custom-white mt-2 w-fit border p-1 px-2 text-center shadow-custom-white"
             >
               LOGIN
             </div>

@@ -28,8 +28,8 @@ module.exports = {
           yellow: "#FFF2A1",
           tan: "#FFCAA7",
           gray: "#DADADA",
-          purple: "#7A84E2",
-          purple2: "#43487C",
+          "purple-100": "#7A84E2",
+          "purple-200": "#43487C",
         },
         hackathon: {
           "blue-100": "#38A3A5",
@@ -89,6 +89,7 @@ module.exports = {
         "jiggle-4s": "jiggle 4s ease-in-out infinite",
         "jiggle-5s": "jiggle 5s ease-in-out infinite",
         "jiggle-5.5s": "jiggle 5.5s ease-in-out infinite",
+        "jiggle-12s": "jiggle 12s ease-in-out infinite",
         "spin-10s": "spin 120s linear infinite",
       },
       keyframes: {

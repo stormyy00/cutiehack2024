@@ -28,8 +28,8 @@ const Table = ({
   return (
     <>
       <div className="flex h-[75vh] flex-col justify-between overflow-y-scroll bg-white">
-        <div className="h-full bg-cutie-purple">
-          <div className="rounded-t-lg bg-cutie-purple font-righteous text-white">
+        <div className="h-full bg-cutie-purple-100">
+          <div className="rounded-t-lg bg-cutie-purple-100 font-righteous text-white">
             {getHeaderGroups().map(({ headers, id }) => (
               <div key={id} className="flex items-center px-3 py-2">
                 {headers.map(({ id, column, getContext }) => (
@@ -75,7 +75,7 @@ const Table = ({
             ) : (
               <>
                 {getRowModel().rows.length === 0 && (
-                  <p className="w-full bg-cutie-purple py-8 text-center text-white">
+                  <p className="w-full bg-cutie-purple-100 py-8 text-center text-white">
                     {empty}
                   </p>
                 )}
@@ -95,7 +95,7 @@ const Table = ({
           </>
         </div>
       </div>
-      <div className="flex w-full items-center justify-end rounded-b-lg bg-cutie-purple p-4 font-righteous text-lg text-white">
+      <div className="flex w-full items-center justify-end rounded-b-lg bg-cutie-purple-100 p-4 font-righteous text-lg text-white">
         <div className="mx-2">{getRowModel().rows.length} row(s)</div>
         <Link
           href={`/admin/${page}?direction=prev&index=${

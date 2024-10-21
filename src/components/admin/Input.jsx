@@ -17,7 +17,7 @@ const Input = ({
     <div className={`flex items-center ${classes}`}>
       {showLabel && <p className="my-0 mr-2 text-lg font-extrabold">{label}</p>}
 
-      <div className="my-1 flex w-full items-center rounded-md bg-gradient-to-r from-cutie-purple to-cutie-purple2 text-white">
+      <div className="my-1 flex w-full items-center rounded-md bg-gradient-to-r from-cutie-purple-100 to-cutie-purple-200 text-white">
         <input
           data-cy={`${label}-input`}
           value={value}

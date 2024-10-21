@@ -19,7 +19,7 @@ const Body = ({ getIsSelected, getVisibleCells, Dropdown, original }) => {
             className={`flex items-center px-3 ${
               getIsSelected()
                 ? "font-righteous"
-                : "bg-gradient-to-r from-cutie-purple to-cutie-purple2 font-righteous text-white"
+                : "bg-gradient-to-r from-cutie-purple-100 to-cutie-purple-200 font-righteous text-white"
             }`}
             data-cy={original.uid}
           >

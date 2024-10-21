@@ -9,7 +9,10 @@ import Link from "next/link";
 
 const Landing = () => {
   return (
-    <div className="relative mt-5 flex w-full flex-col bg-cutie-blue-300 text-white">
+    <div
+      id="home"
+      className="relative mt-5 flex w-full flex-col bg-cutie-blue-300 text-white"
+    >
       <div className="mt-[9vh] flex w-full items-end justify-center">
         <div className="flex w-full flex-col items-center justify-end">
           <p className="my-1 text-base font-bold text-white md:text-4xl">
@@ -19,8 +22,11 @@ const Landing = () => {
             Misson starts in:{" "}
           </p>
           <Countdown />
-          <div className="mb-4 mt-1 flex items-center justify-center whitespace-normal font-righteous text-sm font-medium md:whitespace-nowrap md:text-3xl">
-            <p>Apply to </p>
+          <div className="block font-righteous text-lg font-medium md:hidden">
+            Apply to
+          </div>
+          <div className="mb-4 mt-1 flex items-center justify-center whitespace-normal font-righteous text-base font-medium md:whitespace-nowrap md:text-3xl">
+            <p className="hidden md:block">Apply to</p>
             <Apply text={"REGISTER"} link={"/form/participant"} />
             <p>or</p>
             <Apply text={"MENTOR"} link={"/form/mentor"} />

@@ -49,7 +49,7 @@ const Upload = ({ field, user, setUser, text, maxSize, types, required }) => {
         {!file && (
           <label
             htmlFor="dropzone-file"
-            className="flex h-fit w-full cursor-pointer flex-col items-center justify-center rounded-lg border-2 bg-cutie-purple hover:bg-cutie-purple2"
+            className="flex h-fit w-full cursor-pointer flex-col items-center justify-center rounded-lg border-2 bg-cutie-purple-100 hover:bg-cutie-purple-200"
           >
             <div className="flex flex-col items-center justify-center py-4">
               <LucideUpload className="mb-2 text-3xl text-white" />
